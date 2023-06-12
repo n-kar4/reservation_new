@@ -24,6 +24,12 @@ public class ReservationServices implements IReservationServices{
     @Override
     public void addNewReservation(Reservation reservation){
 
+        reservation.setCreatedOn(new java.sql.Date(System.currentTimeMillis()));
+        if(reservation.getAmount()<0){
+            throw new IllegalArgumentException("Amount cannot be negative");
+        }
+
+        if(reservation.getReservationDate())
         reservationRepository.save(reservation);
     }
 

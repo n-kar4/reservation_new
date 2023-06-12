@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class ReservationApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void getAllReservationsTest(){
 	}
 
 }
