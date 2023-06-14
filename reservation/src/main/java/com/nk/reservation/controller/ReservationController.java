@@ -42,9 +42,8 @@ public class ReservationController {
     }
 
     @GetMapping("/track/{travelRequestId}")
-    public String getReservationByTravelRequestId(@PathVariable int travelRequestId) throws ResourceNotFoundException{
-        // return reservationServices.getReservationByTravelRequestId(travelRequestId).orElse(null);
-        return "ddddddddddddddddddd";
+    public Reservation getReservationByTravelRequestId(@PathVariable int travelRequestId) throws ResourceNotFoundException{
+        return reservationServices.getReservationByTravelRequestId(travelRequestId);
     }
 
     @GetMapping("/{reservationid}/download")

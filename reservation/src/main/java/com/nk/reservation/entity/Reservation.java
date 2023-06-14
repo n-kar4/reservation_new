@@ -52,8 +52,23 @@ public class Reservation {
     private List<ReservationDocs> reservationDocs;
 
 
-    //new sample reswrvation object
-    //    Reservation reservation = new Reservation();
+    //new sample json for this entity
+    // {
+    //     "travelRequestId": 1,
+    //     "reservationDoneByEmployeeId": 1,
+    //     "reservationDoneWithEntity": "Airline",
+    //     "reservationDate": "2021-09-01",
+    //     "amount": 1000,
+    //     "confirmationID": "123456",
+    //     "remarks": "No remarks",
+    //     "reservationTypeId": {
+    //         "id": 1,
+    //         "reservationType": "Flight"
+    //     },
+    //     "reservationDocs": []
+    // }
+
+
 
     
 }
