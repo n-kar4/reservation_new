@@ -9,7 +9,7 @@ public interface IReservationServices {
     
     public List<Reservation> getAllReservations();
     public void addNewReservation(Reservation reservation);
-    public Reservation getReservationByTravelRequestId(int travelRequestId);
+    public List<Reservation> getReservationsByTravelRequestId(int travelRequestId);
     public byte[] downloadReservationsDoc();
     public Optional<Reservation> getReservationById(int id);
 
