@@ -19,9 +19,8 @@ public class ReservationTypeController {
     @Autowired
     private IReservationTypesServices reservationTypesServices;
 
-    @GetMapping("/e")
+    @GetMapping("/home")
     public String home() {
-        System.out.println("Welcome to Reservation Service, but why are you here?");
         return "Welcome to Reservation Service, but why are you here?";
     }
 

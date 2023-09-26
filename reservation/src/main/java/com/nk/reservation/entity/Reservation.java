@@ -29,11 +29,9 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int travelRequestId;
-
     private int reservationDoneByEmployeeId;
-    private LocalDate createdOn;
+    private LocalDate createdOn=LocalDate.now();;
     private String reservationDoneWithEntity;
     private LocalDate reservationDate;
     private int amount;
@@ -50,25 +48,5 @@ public class Reservation {
 
     @OneToMany(mappedBy = "reservation",fetch=FetchType.EAGER)
     private List<ReservationDocs> reservationDocs;
-
-
-    //new sample json for this entity
-    // {
-    //     "travelRequestId": 1,
-    //     "reservationDoneByEmployeeId": 1,
-    //     "reservationDoneWithEntity": "Airline",
-    //     "reservationDate": "2021-09-01",
-    //     "amount": 1000,
-    //     "confirmationID": "123456",
-    //     "remarks": "No remarks",
-    //     "reservationTypeId": {
-    //         "id": 1,
-    //         "reservationType": "Flight"
-    //     },
-    //     "reservationDocs": []
-    // }
-
-
-
-    
+ 
 }
