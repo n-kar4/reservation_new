@@ -24,13 +24,4 @@ public class ReservationTypes{
     // @OneToMany(mappedBy = "reservationTypeId",fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     // private List<Reservation> reservations;
 
-
-    // my sql quaey for inserting into tihs table
-    // INSERT INTO `reservation_types` (`id`, `type_name`) VALUES ('1', 'Business');
-
-    //delete from this table
-    // DELETE FROM `reservation_types` WHERE `reservation_types`.`id` = 1
-
-
-    
 }

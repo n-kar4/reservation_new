@@ -1,6 +1,6 @@
 package com.nk.reservation.entity;
 
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -29,13 +29,11 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    //forign key
-    
-    private int reservationDoneByEmployeeId;
     private int travelRequestId;
-    private Date createdOn;
+    private int reservationDoneByEmployeeId;
+    private LocalDate createdOn=LocalDate.now();;
     private String reservationDoneWithEntity;
-    private Date reservationDate;
+    private LocalDate reservationDate;
     private int amount;
     private String confirmationID;
     private String remarks;
@@ -50,4 +48,5 @@ public class Reservation {
 
     @OneToMany(mappedBy = "reservation",fetch=FetchType.EAGER)
     private List<ReservationDocs> reservationDocs;
+ 
 }
